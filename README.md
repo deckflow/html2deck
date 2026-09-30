@@ -235,6 +235,10 @@ writeFileSync('deck.pptx', result.data);
 
 Start with the [quick start](./docs/quickstart.md), then learn the [core concepts](./docs/concepts.md) and [architecture](./docs/architecture.md). Detailed CLI documentation is available in the [`docs/cli/`](./docs/cli/) directory.
 
+### Agent Skill (Cursor / coding agents)
+
+Install [`skill/html2deck/`](./skill/html2deck/) so agents can convert HTML → PPTX without rediscovering CLI flags and slide conventions. See [skill/README.md](./skill/README.md).
+
 ## License
 
 Proprietary. See [LICENSE](./LICENSE) for details.

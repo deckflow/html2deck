@@ -197,6 +197,10 @@ const result = await convertHtmlToPptx({
 
 详细 CLI 文档见 [`docs/cli/`](./docs/cli/) 目录。
 
+### Agent Skill（Cursor / 编程代理）
+
+安装 [`skill/html2deck/`](./skill/html2deck/)，让代理直接按约定把 HTML 转成 PPTX，无需反复查找 CLI 与幻灯片写作规则。说明见 [skill/README.md](./skill/README.md)。
+
 ## 许可证
 
 专有软件。详见 [LICENSE](./LICENSE)。
