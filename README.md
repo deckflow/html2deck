@@ -233,7 +233,7 @@ writeFileSync('deck.pptx', result.data);
 
 ## Documentation
 
-Start with the [quick start](./docs/quickstart.md), then learn the [core concepts](./docs/concepts.md) and [architecture](./docs/architecture.md). Detailed CLI documentation is available in the [`docs/cli/`](./docs/cli/) directory.
+Start with the [quick start](./docs/quickstart.md), then learn the [core concepts](./docs/concepts.md). Detailed CLI documentation is available in the [`docs/cli/`](./docs/cli/) directory.
 
 ### Agent Skill (Cursor / coding agents)
 

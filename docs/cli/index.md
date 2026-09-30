@@ -1,0 +1,149 @@
+# Overview
+
+> Convert HTML files, stdin, or URLs into PPTX or PNG artifacts from your terminal.
+
+The HTML2Deck CLI gives developers and agents command-line access to HTML-to-deck conversion. It accepts local files, multiple ordered HTML files, stdin, and hosted URLs. It runs synchronously by default, can choose between local and cloud execution, and supports machine-readable JSON output for scripts and CI.
+
+## Quick Start
+
+Run HTML2Deck without installing:
+
+```bash
+npx -y @deckflow/html2deck@latest index.html -o deck.pptx
+```
+
+## 1. Install
+
+HTML2Deck is distributed through npm.
+
+```bash
+npm install -g @deckflow/html2deck
+```
+
+Verify the installation:
+
+```bash
+html2deck --version
+```
+
+## 2. Convert HTML
+
+Convert a single HTML file to PPTX:
+
+```bash
+html2deck index.html
+```
+
+By default, HTML2Deck writes a PPTX next to the input file using the same base name:
+
+```text
+index.pptx
+```
+
+Write to a specific output path:
+
+```bash
+html2deck index.html -o deck.pptx
+```
+
+Pipe HTML from stdin:
+
+```bash
+cat index.html | html2deck - -o deck.pptx
+```
+
+Convert multiple HTML files in order:
+
+```bash
+html2deck page1.html page2.html page3.html -o deck.pptx
+```
+
+Convert a hosted page:
+
+```bash
+html2deck https://example.com/deck.html -o deck.pptx
+```
+
+## 3. Review the Result
+
+The CLI runs as a synchronous conversion task. On success, stdout contains the final result. With the default output mode, that can be the output path:
+
+```text
+deck.pptx
+```
+
+Use `--json` for machine-readable output:
+
+```bash
+html2deck index.html -o deck.pptx --json
+```
+
+```json
+{
+  "ok": true,
+  "input": ["index.html"],
+  "output": "deck.pptx",
+  "format": "pptx",
+  "mode": "free"
+}
+```
+
+## 4. Generate Reports or Other Formats
+
+Create a conversion report next to the output:
+
+```bash
+html2deck ./page.html -o deck.pptx --report
+```
+
+Choose a different output format:
+
+```bash
+html2deck index.html --format png -o frames
+```
+
+Supported formats are:
+
+| Format | Description |
+| --- | --- |
+| `pptx` | PowerPoint deck output. Default. |
+| `png` | PNG frame output. |
+
+Use cloud mode for cloud-only reconstruction features:
+
+```bash
+html2deck index.html \
+  -o deck.pptx \
+  --mode cloud \
+  --embed-fonts \
+```
+
+## 5. Authenticate
+
+Local conversion works without an API key. Cloud mode supports rate-limited guest requests; sign in or configure an API key when prompted or when you need authenticated access.
+
+Start an interactive login flow:
+
+```bash
+html2deck auth login
+```
+
+Or copy your API key from [workspace settings](https://app.deckflow.com/settings/api?nav=API) and store it directly:
+
+```bash
+html2deck config set api-key <key>
+```
+
+The key is stored locally at `~/.deckflow/credentials`.
+
+For CI/Docker/agent environments, set the environment variable instead — it takes precedence over stored credentials:
+
+```bash
+export HTML2DECK_API_KEY=your-api-key
+```
+
+Verify your credentials:
+
+```bash
+html2deck auth status
+```
