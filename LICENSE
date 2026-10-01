@@ -2,12 +2,34 @@ UNLICENSED
 
 Copyright (c) 2024–2026 DeckFlow. All rights reserved.
 
-This repository contains documentation and marketing assets for the proprietary
-npm package @deckflow/html2deck. It does not include product source code.
+This software and its accompanying materials are proprietary and confidential.
+They are NOT open source. No rights are granted except as expressly stated below.
 
-All documentation text, images, and other materials here are proprietary.
-No license to copy, modify, redistribute, or create derivative works is granted
-except as expressly permitted in writing by DeckFlow, or as allowed by the
-limited Free-mode terms of the published npm package.
+LIMITED LICENSE — FREE MODE
+You may install the npm package `@deckflow/html2deck` and use it only in the
+Free mode provided by the unmodified software, subject to the feature
+limitations enforced by the product.
 
-THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+LICENSED / CLOUD MODES
+Full local features require a valid signed license file issued by DeckFlow.
+Cloud mode is governed by DeckFlow Cloud terms. Commercial licensing:
+contact DeckFlow / see product documentation.
+
+RESTRICTIONS
+You may NOT, and may not attempt to:
+  (a) reverse engineer, decompile, disassemble, or otherwise derive source
+      from obfuscated or compiled distributions beyond what mandatory law allows;
+  (b) bypass, disable, modify, or circumvent license checks, free-mode
+      limitations, watermarks, rate limits, or other technical protection measures;
+  (c) forge, alter, or redistribute license files or keys;
+  (d) remove or alter copyright, trademark, or proprietary notices;
+  (e) redistribute, sublicense, or publish the source, build artifacts, or a
+      modified version of this software without prior written permission.
+
+VIOLATION
+Any unauthorized circumvention or cracking of technical protections is a
+material breach. DeckFlow reserves all rights to pursue available legal
+remedies, including civil claims and, where applicable, criminal liability.
+
+NO WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
